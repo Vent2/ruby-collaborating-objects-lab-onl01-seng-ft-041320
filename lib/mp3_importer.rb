@@ -15,10 +15,7 @@ class MP3Importer
     end
 
     def files
-#        puts "in files, path=#{@path}"
-#        puts "wd=#{Dir.getwd.sub(/.*ruby(.*)/, '\1')}"
         filenames = Dir.chdir(@path) do | path |
-#            puts path
             Dir.glob("*.mp3")
         end
         puts "names=#{filenames}"
